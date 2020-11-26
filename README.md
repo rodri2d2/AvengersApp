@@ -27,7 +27,9 @@ The goal of this exercise is to define and to implement a base structure of an a
 <br />
 
 >Este es un proyecto de puesta en practica del BootCamp Full Stack Mobile de KeepCoding
+
 <br />
+
 >This is a learning project from KeepCoding Full Stack Mobile BootCamp.
 
 
