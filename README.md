@@ -9,6 +9,8 @@ El objetivo de la práctica es definir e implementar una estructura base de apli
 - Conocer e impletar UIKIT
 - Maniupular Assets
 
+<br />
+
 
 ## Main goals
 
@@ -17,6 +19,16 @@ The goal of this exercise is to define and to implement a base structure of an a
 - Reinforce the bases of iOS Development
 - Get a bases and beyond on UIKIT
 - How to prepare app's assets to work with
+
+
+<br />
+<br />
+<br />
+<br />
+
+>Este es un proyecto de puesta en practica del BootCamp Full Stack Mobile de KeepCoding
+<br />
+>This is a learning project from KeepCoding Full Stack Mobile BootCamp.
 
 
 
