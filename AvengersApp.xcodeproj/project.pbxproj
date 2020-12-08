@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49A9256EC218005027D3 /* AppDelegate.swift */; };
 		5B5B49AC256EC218005027D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49AB256EC218005027D3 /* SceneDelegate.swift */; };
-		5B5B49AE256EC218005027D3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49AD256EC218005027D3 /* ViewController.swift */; };
+		5B5B49AE256EC218005027D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49AD256EC218005027D3 /* MainViewController.swift */; };
 		5B5B49B1256EC218005027D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49AF256EC218005027D3 /* Main.storyboard */; };
 		5B5B49B3256EC219005027D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49B2256EC219005027D3 /* Assets.xcassets */; };
 		5B5B49B6256EC219005027D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49B4256EC219005027D3 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		5B5B49A6256EC218005027D3 /* AvengersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvengersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5B49A9256EC218005027D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5B49AB256EC218005027D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B5B49AD256EC218005027D3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B5B49AD256EC218005027D3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5B5B49B0256EC218005027D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B5B49B2256EC219005027D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B5B49B5256EC219005027D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,63 @@
 		5B5B49A8256EC218005027D3 /* AvengersApp */ = {
 			isa = PBXGroup;
 			children = (
-				5B5B49A9256EC218005027D3 /* AppDelegate.swift */,
-				5B5B49AB256EC218005027D3 /* SceneDelegate.swift */,
-				5B5B49AD256EC218005027D3 /* ViewController.swift */,
-				5B5B49AF256EC218005027D3 /* Main.storyboard */,
+				5BA07CE4257F88CC009F11CA /* App */,
+				5BA07CE5257F88D3009F11CA /* Utils */,
+				5BA07CE1257F88AD009F11CA /* Models */,
+				5BA07CE2257F88B4009F11CA /* Views */,
+				5BA07CE3257F88BB009F11CA /* Controllers */,
 				5B5B49B2256EC219005027D3 /* Assets.xcassets */,
-				5B5B49B4256EC219005027D3 /* LaunchScreen.storyboard */,
 				5B5B49B7256EC219005027D3 /* Info.plist */,
 			);
 			path = AvengersApp;
+			sourceTree = "<group>";
+		};
+		5BA07CE1257F88AD009F11CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BA07CE2257F88B4009F11CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BA07CE6257F88F9009F11CA /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BA07CE3257F88BB009F11CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B49AD256EC218005027D3 /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BA07CE4257F88CC009F11CA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B49A9256EC218005027D3 /* AppDelegate.swift */,
+				5B5B49AB256EC218005027D3 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5BA07CE5257F88D3009F11CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5BA07CE6257F88F9009F11CA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B5B49B4256EC219005027D3 /* LaunchScreen.storyboard */,
+				5B5B49AF256EC218005027D3 /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B5B49AE256EC218005027D3 /* ViewController.swift in Sources */,
+				5B5B49AE256EC218005027D3 /* MainViewController.swift in Sources */,
 				5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */,
 				5B5B49AC256EC218005027D3 /* SceneDelegate.swift in Sources */,
 			);
@@ -216,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
