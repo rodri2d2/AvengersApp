@@ -13,7 +13,18 @@ class VillainsViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = .systemBackground
-        title = "Bad Guys"
+       
     }
 
+    // MARK: - Class functionalities
+    private func setupViews(){
+        setupTabBar()
+//        setupNavigationBar()
+//        setupCollectionView()
+    }
+    
+    private func setupTabBar(){
+        self.tabBarItem.title = "Indra"
+    }
+    
 }

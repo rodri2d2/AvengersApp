@@ -12,15 +12,13 @@ struct ViewControllersArray {
     
     private var herosViewController: UINavigationController {
         let vc = UINavigationController(rootViewController: HerosViewController())
-        vc.tabBarItem.title = "Avengers"
-        vc.tabBarItem.image = UIImage(systemName: "person")
+        vc.tabBarItem.image = UIImage(named: "TabBar_Avengers")
         return vc
     }
 
     private var villainsViewController: UINavigationController {
         let vc = UINavigationController(rootViewController: VillainsViewController())
-        vc.tabBarItem.title = "Bad Guys"
-        vc.tabBarItem.image = UIImage(systemName: "person.fill")
+        vc.tabBarItem.image = UIImage(named: "TabBar_Thanos")
         return vc
     }
     

@@ -20,8 +20,7 @@ class LaunchViewController: UIViewController {
     lazy var tabViewController: UITabBarController = { [weak self] in
         let tabView = UITabBarController()
         tabView.setViewControllers(viewControllers.array(), animated: true)
-        tabView.modalTransitionStyle = .flipHorizontal
-        tabView.modalPresentationStyle = .fullScreen
+        tabView.modalPresentationStyle  = .fullScreen
         return tabView
 
     }()

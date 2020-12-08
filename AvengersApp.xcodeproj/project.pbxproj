@@ -16,6 +16,10 @@
 		5BA07CF7257F9BE0009F11CA /* Ext+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */; };
 		5BA07CFC257FCC2C009F11CA /* HerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CFB257FCC2C009F11CA /* HerosViewController.swift */; };
 		5BA07CFF257FCC64009F11CA /* VillainsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CFE257FCC64009F11CA /* VillainsViewController.swift */; };
+		5BA07D05257FE7E2009F11CA /* MarvelCharacters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07D04257FE7E2009F11CA /* MarvelCharacters.swift */; };
+		5BA07D08257FE93B009F11CA /* Heros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07D07257FE93B009F11CA /* Heros.swift */; };
+		5BA07D0E257FECA6009F11CA /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07D0C257FECA6009F11CA /* HeroCell.swift */; };
+		5BA07D0F257FECA6009F11CA /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA07D0D257FECA6009F11CA /* HeroCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIView.swift"; sourceTree = "<group>"; };
 		5BA07CFB257FCC2C009F11CA /* HerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewController.swift; sourceTree = "<group>"; };
 		5BA07CFE257FCC64009F11CA /* VillainsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillainsViewController.swift; sourceTree = "<group>"; };
+		5BA07D04257FE7E2009F11CA /* MarvelCharacters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharacters.swift; sourceTree = "<group>"; };
+		5BA07D07257FE93B009F11CA /* Heros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heros.swift; sourceTree = "<group>"; };
+		5BA07D0C257FECA6009F11CA /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		5BA07D0D257FECA6009F11CA /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,8 @@
 		5BA07CE1257F88AD009F11CA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5BA07D04257FE7E2009F11CA /* MarvelCharacters.swift */,
+				5BA07D07257FE93B009F11CA /* Heros.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -83,6 +93,7 @@
 		5BA07CE2257F88B4009F11CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5BA07D0B257FEC83009F11CA /* HeroCell */,
 				5BA07CE6257F88F9009F11CA /* Storyboards */,
 			);
 			path = Views;
@@ -122,6 +133,15 @@
 				5B5B49B4256EC219005027D3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5BA07D0B257FEC83009F11CA /* HeroCell */ = {
+			isa = PBXGroup;
+			children = (
+				5BA07D0C257FECA6009F11CA /* HeroCell.swift */,
+				5BA07D0D257FECA6009F11CA /* HeroCell.xib */,
+			);
+			path = HeroCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B5B49B6256EC219005027D3 /* LaunchScreen.storyboard in Resources */,
+				5BA07D0F257FECA6009F11CA /* HeroCell.xib in Resources */,
 				5B5B49B3256EC219005027D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,13 +214,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA07D05257FE7E2009F11CA /* MarvelCharacters.swift in Sources */,
 				5BA07CFF257FCC64009F11CA /* VillainsViewController.swift in Sources */,
 				5BA07CF7257F9BE0009F11CA /* Ext+UIView.swift in Sources */,
 				5B5B49AE256EC218005027D3 /* LaunchViewController.swift in Sources */,
 				5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */,
+				5BA07D0E257FECA6009F11CA /* HeroCell.swift in Sources */,
 				5BA07CFC257FCC2C009F11CA /* HerosViewController.swift in Sources */,
 				5BA07CF1257F97C5009F11CA /* ViewControllersArray.swift in Sources */,
 				5B5B49AC256EC218005027D3 /* SceneDelegate.swift in Sources */,
+				5BA07D08257FE93B009F11CA /* Heros.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
