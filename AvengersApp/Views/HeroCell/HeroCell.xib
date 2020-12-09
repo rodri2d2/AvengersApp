@@ -21,7 +21,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPt-kl-Dzs">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bruja_back" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-tN-60s">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="witch_back" translatesAutoresizingMaskIntoConstraints="NO" id="TI9-tN-60s">
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="200"/>
                             </imageView>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uWZ-j4-dXh">
@@ -61,11 +61,15 @@
                 <constraint firstItem="EPt-kl-Dzs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="EzN-EH-Ubp"/>
                 <constraint firstAttribute="bottom" secondItem="EPt-kl-Dzs" secondAttribute="bottom" id="yaz-g6-P73"/>
             </constraints>
+            <connections>
+                <outlet property="heroCardImage" destination="TI9-tN-60s" id="zPk-Ia-fb2"/>
+                <outlet property="heroCardName" destination="Bu7-Ip-3M1" id="bLE-OW-7rr"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="bruja_back" width="420" height="200"/>
+        <image name="witch_back" width="420" height="200"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
