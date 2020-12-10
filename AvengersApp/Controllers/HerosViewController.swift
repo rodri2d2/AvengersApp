@@ -12,7 +12,7 @@ class HerosViewController: UIViewController  {
     
     // MARK: - Properties
     let listOfHeros = Heros.listOfHeros()
-
+    
     
     // MARK: - Views
     lazy var collectionView: UICollectionView = { [weak self] in
@@ -26,7 +26,7 @@ class HerosViewController: UIViewController  {
         return collectionView
         
     }()
-
+    
     let collectionViewBackground : UIImageView = {
         let iv = UIImageView()
         iv.image = UIImage(named:"nav_bar")
@@ -34,19 +34,18 @@ class HerosViewController: UIViewController  {
         return iv
     }()
     
+    
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-
-
+        
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupViews()
     }
+    
     
     // MARK: - Class functionalities
     private func setupViews(){
@@ -58,55 +57,42 @@ class HerosViewController: UIViewController  {
     private func setupTabBar(){
         self.tabBarController?.delegate = self
         self.tabBarController?.tabBar.tintColor = UIColor(named: "heros")
-       
+        
     }
     
     private func setupNavigationBar(){
         
         //
         self.navigationItem.title = "Avengers"
-        self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.barStyle = .black
-    
-        //
-        let navBarStandarAppearance = UINavigationBarAppearance()
-        navBarStandarAppearance.titleTextAttributes = [
+        self.navigationController!.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
             .foregroundColor: UIColor.white,
-            .font: UIFont(name: "Futura-bold", size: 35)!
+            .font: UIFont(name: "Futura-bold", size: 40)!
+        ]
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
+                                                                        .font: UIFont(name: "Futura", size: 25)!
         ]
         
-        let navBarScrollingAppearance = UINavigationBarAppearance()
-        navBarScrollingAppearance.largeTitleTextAttributes = [
-            .foregroundColor: UIColor(named: "heros")!,
-            .font: UIFont(name: "Futura-bold", size: 35)!
-        ]
+        //        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+        //        imageView.contentMode = .scaleAspectFit
+        //        let image = UIImage(named: "TabBar_Avengers")
+        //        imageView.image = image
+        //        navigationItem.titleView = imageView
         
-        let imageView = UIImageView(image: UIImage(named: "TabBar_Avengers"))
-        self.navigationItem.titleView = imageView
-        
-        navBarScrollingAppearance.backgroundColor = .white
-        
-
-        self.navigationController?.navigationBar.standardAppearance = navBarStandarAppearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = navBarScrollingAppearance
-        
-
     }
-
+    
     private func setupCollectionView(){
         self.view.addSubview(collectionView)
         collectionView.pin(to: self.view)
         collectionView.backgroundColor = UIColor(named: "heros")
     }
-
+    
 }
-
 
 
 // MARK: - Extension for UICollectionView DataSource
 extension HerosViewController: UICollectionViewDataSource{
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listOfHeros.count
@@ -114,14 +100,11 @@ extension HerosViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCell.IDENTIFIER, for: indexPath) as? HeroCell else { return UICollectionViewCell()}
-       
         
         let hero = listOfHeros[indexPath.row]
         cell.configure(cellWith: hero)
-        
         return cell
     }
-    
     
 }
 
@@ -134,11 +117,14 @@ extension HerosViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailController(), animated: true)
+        
+        let hero = listOfHeros[indexPath.row]
+        navigationController?.pushViewController(DetailController(character: hero), animated: true)
     }
-    
-    
+
 }
+
+
 
 // MARK: - Extension for UITabBarController Delegate
 extension HerosViewController: UITabBarControllerDelegate{

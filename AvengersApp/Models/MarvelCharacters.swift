@@ -10,19 +10,24 @@ import Foundation
 
 class MarvelCharacters {
     
-    var heroName: String?
-    var name:     String?
-    var image:    String?
-    var planet:   String?
-    var story:    Story?
+    var heroName:       String?
+    var name:           String?
+    var image:          String?
+    var detailImage:    String?
+    var planet:         String?
+    var symbol:         String?
+    var createdBy:      String?
+
     
 
-    init(name: String?, heroName: String?, image: String?, story: Story?, planet: String?) {
-        self.name       = name
-        self.heroName   = heroName
-        self.image      = image
-        self.story      = story
-        self.planet     = planet
+    init(name: String?, heroName: String?, image: String?, detailImage: String?, planet: String?, symbol: String?, createdBy:      String?) {
+        self.name           = name
+        self.heroName       = heroName
+        self.image          = image
+        self.planet         = planet
+        self.detailImage    = detailImage
+        self.symbol         = symbol
+        self.createdBy      = createdBy
     }
     
 }

@@ -62,37 +62,22 @@ class VillainsViewController: UIViewController {
     private func setupNavigationBar(){
         
         //
-        self.navigationItem.title = "Bad Guys"
-        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationItem.title = "Avengers"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        self.navigationController?.navigationBar.barStyle = .black
-    
-        //
-        let navBarStandarAppearance = UINavigationBarAppearance()
-        navBarStandarAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
-            .font: UIFont(name: "Futura-bold", size: 35)!
-
-            
+        self.navigationController!.navigationBar.barStyle = .black
+        self.navigationController?.navigationBar.largeTitleTextAttributes = [
+                                                                             .foregroundColor: UIColor.white,
+                                                                             .font: UIFont(name: "Futura-bold", size: 40)!
+                                                                            ]
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
+                                                                        .font: UIFont(name: "Futura", size: 25)!
         ]
 
-
-        let navBarScrollingAppearance = UINavigationBarAppearance()
-        navBarScrollingAppearance.largeTitleTextAttributes = [
-            .foregroundColor: UIColor(named: "villain")!,
-            .font: UIFont(name: "Futura-bold", size: 35)!
-        ]
-        navBarScrollingAppearance.backgroundColor = .white
-
-       
-        let imageView = UIImageView(image: UIImage(named: "TabBar_Thanos"))
-        self.navigationItem.titleView = imageView
-        
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationController?.navigationBar.standardAppearance = navBarStandarAppearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = navBarScrollingAppearance
-        
-
+//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
+//        imageView.contentMode = .scaleAspectFit
+//        let image = UIImage(named: "TabBar_Avengers")
+//        imageView.image = image
+//        navigationItem.titleView = imageView
     }
 
     private func setupCollectionView(){
@@ -115,10 +100,6 @@ extension VillainsViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCell.IDENTIFIER, for: indexPath) as? HeroCell else { return UICollectionViewCell()}
        
-        
-    
-       
-        
         return cell
     }
     
@@ -133,7 +114,7 @@ extension VillainsViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailController(), animated: true)
+//        navigationController?.pushViewController(DetailController(), animated: true)
     }
     
     
