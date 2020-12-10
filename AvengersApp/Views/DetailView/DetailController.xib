@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailController" customModule="AvengersApp" customModuleProvider="target">
+            <connections>
+                <outlet property="character" destination="qMH-p7-co8" id="vCO-H8-oN4"/>
+                <outlet property="characterImage" destination="qxI-gA-wzp" id="d9a-xI-8fB"/>
+                <outlet property="characterName" destination="b4f-pF-PI6" id="xgT-mF-jyo"/>
+                <outlet property="characterPlanet" destination="mSI-ro-PWc" id="gkO-Tn-mtI"/>
+                <outlet property="createdBy" destination="qQX-PW-tdn" id="7eI-Nu-Blk"/>
+                <outlet property="symbolImage" destination="fWn-41-IZ8" id="clQ-9o-ns1"/>
+                <outlet property="symbolView" destination="RSB-hM-UyE" id="ewc-8p-oiz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q5H-Nl-eYF">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_front" translatesAutoresizingMaskIntoConstraints="NO" id="qxI-gA-wzp">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="455"/>
+                        </imageView>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yi1-yT-Wbc">
+                            <rect key="frame" x="0.0" y="395" width="414" height="60"/>
+                            <color key="backgroundColor" name="villain"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Black Panther" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMH-p7-co8">
+                            <rect key="frame" x="8" y="408" width="398" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="30"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwH-Fk-EjX">
+                            <rect key="frame" x="8" y="463" width="398" height="312"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSB-hM-UyE">
+                                    <rect key="frame" x="119" y="158.5" width="158" height="120.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thor_sy" translatesAutoresizingMaskIntoConstraints="NO" id="fWn-41-IZ8">
+                                            <rect key="frame" x="20" y="20" width="118" height="80.5"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="15"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="fWn-41-IZ8" secondAttribute="trailing" constant="20" symbolic="YES" id="MOw-jz-SGE"/>
+                                        <constraint firstItem="fWn-41-IZ8" firstAttribute="leading" secondItem="RSB-hM-UyE" secondAttribute="leading" constant="20" symbolic="YES" id="Ouo-vH-dU8"/>
+                                        <constraint firstItem="fWn-41-IZ8" firstAttribute="centerX" secondItem="RSB-hM-UyE" secondAttribute="centerX" id="axQ-Kr-NCP"/>
+                                        <constraint firstAttribute="bottom" secondItem="fWn-41-IZ8" secondAttribute="bottom" constant="20" symbolic="YES" id="g1Q-UF-wM1"/>
+                                        <constraint firstItem="fWn-41-IZ8" firstAttribute="top" secondItem="RSB-hM-UyE" secondAttribute="top" constant="20" symbolic="YES" id="rP4-Nu-QWh"/>
+                                        <constraint firstItem="fWn-41-IZ8" firstAttribute="centerY" secondItem="RSB-hM-UyE" secondAttribute="centerY" id="x7F-d5-nOd"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5Fv-82-xxh">
+                                    <rect key="frame" x="20" y="20" width="358" height="130.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UI8-g0-urF">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="23.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYf-X6-Zep">
+                                                    <rect key="frame" x="0.0" y="0.0" width="176.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" name="heros"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T'Challa" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4f-pF-PI6">
+                                                    <rect key="frame" x="181.5" y="2" width="176.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                    <color key="textColor" name="heros"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PbX-pw-9QU">
+                                            <rect key="frame" x="0.0" y="53.5" width="358" height="23.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Creador:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pl6-Yh-VCA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="176.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" name="heros"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tierra" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQX-PW-tdn">
+                                                    <rect key="frame" x="181.5" y="2" width="176.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                    <color key="textColor" name="heros"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="firstBaseline" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OW7-W0-5BS">
+                                            <rect key="frame" x="0.0" y="107" width="358" height="23.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Origen:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vx8-iX-nmW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="176.5" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                                    <color key="textColor" name="heros"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tierra" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSI-ro-PWc">
+                                                    <rect key="frame" x="181.5" y="2" width="176.5" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                                    <color key="textColor" name="heros"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="PbX-pw-9QU" secondAttribute="trailing" id="3cH-oG-xWT"/>
+                                        <constraint firstAttribute="trailing" secondItem="UI8-g0-urF" secondAttribute="trailing" id="7zx-zG-pAL"/>
+                                        <constraint firstItem="PbX-pw-9QU" firstAttribute="leading" secondItem="5Fv-82-xxh" secondAttribute="leading" id="OH3-GY-uhb"/>
+                                        <constraint firstAttribute="bottom" secondItem="OW7-W0-5BS" secondAttribute="bottom" id="a8C-JR-Bf7"/>
+                                        <constraint firstItem="UI8-g0-urF" firstAttribute="top" secondItem="5Fv-82-xxh" secondAttribute="top" id="hXh-0C-DBl"/>
+                                        <constraint firstItem="UI8-g0-urF" firstAttribute="leading" secondItem="5Fv-82-xxh" secondAttribute="leading" id="izV-n0-0wB"/>
+                                        <constraint firstItem="OW7-W0-5BS" firstAttribute="leading" secondItem="5Fv-82-xxh" secondAttribute="leading" id="onQ-T5-Vb3"/>
+                                        <constraint firstAttribute="trailing" secondItem="OW7-W0-5BS" secondAttribute="trailing" id="qgb-nq-68F"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                            <constraints>
+                                <constraint firstItem="5Fv-82-xxh" firstAttribute="leading" secondItem="WwH-Fk-EjX" secondAttribute="leading" constant="20" symbolic="YES" id="ClD-Kj-Da6"/>
+                                <constraint firstAttribute="trailing" secondItem="5Fv-82-xxh" secondAttribute="trailing" constant="20" symbolic="YES" id="Ctv-Ab-85P"/>
+                                <constraint firstItem="RSB-hM-UyE" firstAttribute="leading" secondItem="WwH-Fk-EjX" secondAttribute="leading" constant="119" id="E2t-wQ-OdH"/>
+                                <constraint firstAttribute="trailing" secondItem="RSB-hM-UyE" secondAttribute="trailing" constant="121" id="ImF-wc-7Mv"/>
+                                <constraint firstItem="RSB-hM-UyE" firstAttribute="top" secondItem="5Fv-82-xxh" secondAttribute="bottom" constant="8" id="T9A-Lc-2OK"/>
+                                <constraint firstItem="5Fv-82-xxh" firstAttribute="top" secondItem="WwH-Fk-EjX" secondAttribute="top" constant="20" symbolic="YES" id="gYa-Jw-ZEU"/>
+                                <constraint firstAttribute="bottom" secondItem="RSB-hM-UyE" secondAttribute="bottom" constant="33" id="xLa-yh-Mjo"/>
+                                <constraint firstAttribute="bottom" secondItem="5Fv-82-xxh" secondAttribute="bottom" constant="161.5" id="yKW-SY-V3E"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" name="heros"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yi1-yT-Wbc" secondAttribute="trailing" id="3A8-ND-tm0"/>
+                        <constraint firstItem="yi1-yT-Wbc" firstAttribute="top" secondItem="q5H-Nl-eYF" secondAttribute="top" constant="395" id="5Xd-pT-WlN"/>
+                        <constraint firstItem="WwH-Fk-EjX" firstAttribute="leading" secondItem="q5H-Nl-eYF" secondAttribute="leading" constant="8" id="DR9-Bl-s5j"/>
+                        <constraint firstItem="qxI-gA-wzp" firstAttribute="top" secondItem="q5H-Nl-eYF" secondAttribute="top" id="DVX-Ta-jDg"/>
+                        <constraint firstAttribute="bottom" secondItem="yi1-yT-Wbc" secondAttribute="bottom" constant="441" id="FHw-VD-3Hk"/>
+                        <constraint firstAttribute="bottom" secondItem="qxI-gA-wzp" secondAttribute="bottom" constant="441" id="GIX-ZZ-OF9"/>
+                        <constraint firstAttribute="trailing" secondItem="WwH-Fk-EjX" secondAttribute="trailing" constant="8" id="QKQ-2g-eiu"/>
+                        <constraint firstItem="WwH-Fk-EjX" firstAttribute="top" secondItem="qxI-gA-wzp" secondAttribute="bottom" constant="8" symbolic="YES" id="Y1F-XY-yaG"/>
+                        <constraint firstItem="yi1-yT-Wbc" firstAttribute="leading" secondItem="q5H-Nl-eYF" secondAttribute="leading" id="m2L-Yw-5ze"/>
+                        <constraint firstItem="qxI-gA-wzp" firstAttribute="leading" secondItem="q5H-Nl-eYF" secondAttribute="leading" id="mc4-Ua-CKo"/>
+                        <constraint firstAttribute="trailing" secondItem="qxI-gA-wzp" secondAttribute="trailing" id="pCE-Ud-aaP"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="q5H-Nl-eYF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jbe-Ht-ew8"/>
+                <constraint firstItem="q5H-Nl-eYF" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="mQq-Z6-5A6"/>
+                <constraint firstAttribute="bottom" secondItem="q5H-Nl-eYF" secondAttribute="bottom" id="xWB-Ii-llO"/>
+                <constraint firstItem="q5H-Nl-eYF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xpY-aY-H1c"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="112.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="black_front" width="420" height="302.5"/>
+        <image name="thor_sy" width="750" height="750"/>
+        <namedColor name="heros">
+            <color red="0.086000002920627594" green="0.19200000166893005" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="villain">
+            <color red="0.3529999852180481" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
