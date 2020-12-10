@@ -1,0 +1,174 @@
+//
+//  Enimies.swift
+//  AvengersApp
+//
+//  Created by Rodrigo Candido on 10/12/20.
+//
+
+import Foundation
+class Enimies: MarvelCharacters {
+    
+    init() {
+        super.init(name: "Marvel Hero", heroName: "Marvel Hero", image: nil, detailImage: nil, planet: nil, symbol: nil, createdBy: nil)
+    }
+    
+    override init(name: String?, heroName: String?, image: String?, detailImage: String?, planet: String?, symbol: String?, createdBy: String?) {
+        super.init(name: name, heroName: heroName, image: image, detailImage: detailImage, planet: planet, symbol: symbol, createdBy: createdBy)
+    }
+    
+    
+    static func listOfHeros() -> [Heros]{
+        return [
+            Heros(
+                  name: "N'Jadaka",
+                  heroName: "Killmonger",
+                  image: "",
+                  detailImage: "",
+                  planet: "Wakanda",
+                symbol: nil, createdBy: "Don McGregor"
+            ),
+            
+            
+            Heros(name: "Obadiah Stane.",
+                  heroName: "Iron Monger",
+                  image: "iron_back",
+                  detailImage: "iron_detail",
+                  planet: "EEUU",
+                  symbol: nil, createdBy: "Dennis O'Neil"
+            ),
+            
+            
+            Heros(name: "Johann Schmidt",
+                  heroName: "Red Skull",
+                  image: "capitan_back",
+                  detailImage: "capitan_detail",
+                  planet: "Alemania",
+                  symbol: nil, createdBy: "Joe Simon"
+            ),
+            
+            
+            Heros(name: "Groot",
+                  heroName: "Groot",
+                  image: "groot_back",
+                  detailImage: "groot_detail",
+                  planet: "Planeta X",
+                  symbol: "guardians_sy", createdBy: "Jack Kirby"
+            ),
+            
+            Heros(name: "Thor Odinson",
+                  heroName: "Thor",
+                  image: "thor_back",
+                  detailImage: "thor_detail",
+                  planet: "Asgard",
+                  symbol: "thor_sy", createdBy: "Jack Kirby"),
+            
+            Heros(name: "Natasha Romanoff",
+                  heroName: "Black Widow",
+                  image: "widow_back",
+                  detailImage: "widow_detail",
+                  planet: "Rusia",
+                  symbol: "widow_sy", createdBy: "Stan Lee"
+            ),
+            
+            Heros(name: "Bruce Banner",
+                  heroName: "Hulk",
+                  image: "hulk_back",
+                  detailImage: "hulk_detail",
+                  planet: "Dayton",
+                  symbol: "hulk_sy", createdBy: "Stan Lee"
+            ),
+            
+            Heros(name: "Clint Barton",
+                  heroName: "Hawkeye",
+                  image: "hawkeye_back",
+                  detailImage: "hawkeye_detail",
+                  planet: "Waverly",
+                  symbol: nil, createdBy: "Don Heck"
+            ),
+            
+            
+            Heros(name: "Wanda Maximoff",
+                  heroName: "Scarlet Witch",
+                  image: "witch_back",
+                  detailImage: "witch_detail",
+                  planet: "Sokovia",
+                  symbol: "witch_sy", createdBy: "Jack Kirby"
+            ),
+            
+            Heros(name: "James Rhode",
+                  heroName: "War Machine",
+                  image: "war_back",
+                  detailImage: "war_detail",
+                  planet: "Filadelfia",
+                  symbol: nil, createdBy: "David Michelinie "
+            
+            ),
+            
+            Heros(name: "Scott Lang",
+                  heroName: "Ant-Man",
+                  image: "ant_back",
+                  detailImage: "ant_detail",
+                  planet: "Coral Gables",
+                  symbol: "ant_sy", createdBy: "David Michelinie"
+            ),
+            
+            Heros(name: "Sam Wilson",
+                  heroName: "Falcon",
+                  image: "falcon_back",
+                  detailImage: "falcon_detail",
+                  planet: "Harlem",
+                  symbol: "falcon_sy", createdBy: "Gene Colan"
+            ),
+            
+            Heros(name: "Stephen Strange",
+                  heroName: "Dr. Strange",
+                  image: "doctor_back",
+                  detailImage: "doctor_detail",
+                  planet: "Nueva York",
+                  symbol: "doctor_sy", createdBy: "Steve Ditko"
+            ),
+            
+            Heros(name: "Peter Parker",
+                  heroName: "Spider-Man",
+                  image: "spider_back",
+                  detailImage: "spider_detail",
+                  planet: "Forest Hills, Queens",
+                  symbol: "spider_sy", createdBy: "Stan Lee"
+            ),
+            
+            Heros(name: "Peter Quill",
+                  heroName: "Star Lord",
+                  image: "star_back",
+                  detailImage: "star_detail",
+                  planet: "St. Charles",
+                  symbol: "guardians_sy", createdBy: "Steve Englehart"
+            ),
+            
+            Heros(name: "Vision",
+                  heroName: "Vision",
+                  image: "vision_back",
+                  detailImage: "vision_detail",
+                  planet: "Tierra",
+                  symbol: "vision_sy", createdBy: "Roy Thomas"
+            ),
+            
+            Heros(name: "Carol Denvers",
+                  heroName: "Capitana Marvel",
+                  image: "capitana_back",
+                  detailImage: "capitana_detail",
+                  planet: "Cabo Cañaveral",
+                  symbol: "capitana_sy", createdBy: "Roy Thomas"
+            ),
+            
+            Heros(name: "Rocket Raccoon",
+                  heroName: "Rocky Raccoon",
+                  image: "raccoon_back",
+                  detailImage: "raccoon_detail",
+                  planet: "Keystone",
+                  symbol: "guardians_sy", createdBy: "Bill Mantlo"
+            )
+        ]
+    }
+    
+    
+}

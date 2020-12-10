@@ -13,6 +13,7 @@
 		5B5B49B3256EC219005027D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49B2256EC219005027D3 /* Assets.xcassets */; };
 		5B5B49B6256EC219005027D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49B4256EC219005027D3 /* LaunchScreen.storyboard */; };
 		5B7B1F7E25820E7D006C13E1 /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B1F7D25820E7D006C13E1 /* Ext+UIViewController.swift */; };
+		5B7B1F842582A5E3006C13E1 /* Enimies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B1F832582A5E3006C13E1 /* Enimies.swift */; };
 		5BA07CF1257F97C5009F11CA /* ViewControllersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CF0257F97C5009F11CA /* ViewControllersArray.swift */; };
 		5BA07CF7257F9BE0009F11CA /* Ext+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */; };
 		5BA07CFC257FCC2C009F11CA /* HerosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CFB257FCC2C009F11CA /* HerosViewController.swift */; };
@@ -34,6 +35,7 @@
 		5B5B49B5256EC219005027D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5B49B7256EC219005027D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B7B1F7D25820E7D006C13E1 /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
+		5B7B1F832582A5E3006C13E1 /* Enimies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enimies.swift; sourceTree = "<group>"; };
 		5BA07CF0257F97C5009F11CA /* ViewControllersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersArray.swift; sourceTree = "<group>"; };
 		5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIView.swift"; sourceTree = "<group>"; };
 		5BA07CFB257FCC2C009F11CA /* HerosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HerosViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				5BA07D04257FE7E2009F11CA /* MarvelCharacters.swift */,
 				5BA07D07257FE93B009F11CA /* Heros.swift */,
+				5B7B1F832582A5E3006C13E1 /* Enimies.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				5BA07CF1257F97C5009F11CA /* ViewControllersArray.swift in Sources */,
 				5B5B49AC256EC218005027D3 /* SceneDelegate.swift in Sources */,
 				5BA07D08257FE93B009F11CA /* Heros.swift in Sources */,
+				5B7B1F842582A5E3006C13E1 /* Enimies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
