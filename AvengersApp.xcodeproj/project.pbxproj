@@ -23,7 +23,6 @@
 		5BA07D0F257FECA6009F11CA /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA07D0D257FECA6009F11CA /* HeroCell.xib */; };
 		5BEBAEB5258125C100433476 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAEB3258125C100433476 /* DetailController.swift */; };
 		5BEBAEB6258125C100433476 /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BEBAEB4258125C100433476 /* DetailController.xib */; };
-		5BEBAEBD25814E8B00433476 /* CharactersStoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEBAEBC25814E8B00433476 /* CharactersStoryEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +44,6 @@
 		5BA07D0D257FECA6009F11CA /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
 		5BEBAEB3258125C100433476 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		5BEBAEB4258125C100433476 /* DetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailController.xib; sourceTree = "<group>"; };
-		5BEBAEBC25814E8B00433476 /* CharactersStoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersStoryEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 			children = (
 				5BA07CF0257F97C5009F11CA /* ViewControllersArray.swift */,
 				5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */,
-				5BEBAEBC25814E8B00433476 /* CharactersStoryEnum.swift */,
 				5B7B1F7D25820E7D006C13E1 /* Ext+UIViewController.swift */,
 			);
 			path = Utils;
@@ -241,7 +238,6 @@
 				5BEBAEB5258125C100433476 /* DetailController.swift in Sources */,
 				5B5B49AE256EC218005027D3 /* LaunchViewController.swift in Sources */,
 				5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */,
-				5BEBAEBD25814E8B00433476 /* CharactersStoryEnum.swift in Sources */,
 				5B7B1F7E25820E7D006C13E1 /* Ext+UIViewController.swift in Sources */,
 				5BA07D0E257FECA6009F11CA /* HeroCell.swift in Sources */,
 				5BA07CFC257FCC2C009F11CA /* HerosViewController.swift in Sources */,
