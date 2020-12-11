@@ -8,7 +8,7 @@
 import Foundation
 
 
-class MarvelCharacters {
+class MarvelCharacter {
     
     var heroName:       String?
     var name:           String?
