@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B36719D2583796400D856A2 /* BeAHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36719B2583796400D856A2 /* BeAHeroViewController.swift */; };
+		5B36719E2583796400D856A2 /* BeAHeroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B36719C2583796400D856A2 /* BeAHeroViewController.xib */; };
 		5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49A9256EC218005027D3 /* AppDelegate.swift */; };
 		5B5B49AC256EC218005027D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49AB256EC218005027D3 /* SceneDelegate.swift */; };
 		5B5B49AE256EC218005027D3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49AD256EC218005027D3 /* LaunchViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B36719B2583796400D856A2 /* BeAHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeAHeroViewController.swift; sourceTree = "<group>"; };
+		5B36719C2583796400D856A2 /* BeAHeroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeAHeroViewController.xib; sourceTree = "<group>"; };
 		5B5B49A6256EC218005027D3 /* AvengersApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AvengersApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B5B49A9256EC218005027D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B5B49AB256EC218005027D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B3671A02583797000D856A2 /* BeAHeroView */ = {
+			isa = PBXGroup;
+			children = (
+				5B36719C2583796400D856A2 /* BeAHeroViewController.xib */,
+			);
+			path = BeAHeroView;
+			sourceTree = "<group>";
+		};
 		5B5B499D256EC218005027D3 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +114,7 @@
 		5BA07CE2257F88B4009F11CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B3671A02583797000D856A2 /* BeAHeroView */,
 				5BEBAEB8258125CA00433476 /* DetailView */,
 				5BA07D0B257FEC83009F11CA /* HeroCell */,
 				5BA07CE6257F88F9009F11CA /* Storyboards */,
@@ -116,6 +129,7 @@
 				5BA07CFB257FCC2C009F11CA /* HerosViewController.swift */,
 				5BA07CFE257FCC64009F11CA /* VillainsViewController.swift */,
 				5BEBAEB3258125C100433476 /* DetailController.swift */,
+				5B36719B2583796400D856A2 /* BeAHeroViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +238,7 @@
 				5BEBAEB6258125C100433476 /* DetailController.xib in Resources */,
 				5B5B49B6256EC219005027D3 /* LaunchScreen.storyboard in Resources */,
 				5BA07D0F257FECA6009F11CA /* HeroCell.xib in Resources */,
+				5B36719E2583796400D856A2 /* BeAHeroViewController.xib in Resources */,
 				5B5B49B3256EC219005027D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,6 +253,7 @@
 				5BA07D05257FE7E2009F11CA /* MarvelCharacter.swift in Sources */,
 				5BA07CFF257FCC64009F11CA /* VillainsViewController.swift in Sources */,
 				5BA07CF7257F9BE0009F11CA /* Ext+UIView.swift in Sources */,
+				5B36719D2583796400D856A2 /* BeAHeroViewController.swift in Sources */,
 				5BEBAEB5258125C100433476 /* DetailController.swift in Sources */,
 				5B5B49AE256EC218005027D3 /* LaunchViewController.swift in Sources */,
 				5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */,
