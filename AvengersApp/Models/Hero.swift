@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Heros: MarvelCharacters {
+class Hero: MarvelCharacter {
     
     init() {
         super.init(name: "Marvel Hero", heroName: "Marvel Hero", image: nil, detailImage: nil, planet: nil, symbol: nil, createdBy: nil)
@@ -17,9 +17,9 @@ class Heros: MarvelCharacters {
     }
     
     
-    static func listOfHeros() -> [Heros]{
+    static func listOfHeros() -> [Hero]{
         return [
-            Heros(
+            Hero(
                   name: "T'Challa",
                   heroName: "Black Panther",
                   image: "black_back",
@@ -29,7 +29,7 @@ class Heros: MarvelCharacters {
             ),
             
             
-            Heros(name: "Tony Stark",
+            Hero(name: "Tony Stark",
                   heroName: "Iron Man",
                   image: "iron_back",
                   detailImage: "iron_detail",
@@ -38,7 +38,7 @@ class Heros: MarvelCharacters {
             ),
             
             
-            Heros(name: "Steve Rogers",
+            Hero(name: "Steve Rogers",
                   heroName: "Capitan America",
                   image: "capitan_back",
                   detailImage: "capitan_detail",
@@ -47,7 +47,7 @@ class Heros: MarvelCharacters {
             ),
             
             
-            Heros(name: "Groot",
+            Hero(name: "Groot",
                   heroName: "Groot",
                   image: "groot_back",
                   detailImage: "groot_detail",
@@ -55,14 +55,14 @@ class Heros: MarvelCharacters {
                   symbol: "guardians_sy", createdBy: "Jack Kirby"
             ),
             
-            Heros(name: "Thor Odinson",
+            Hero(name: "Thor Odinson",
                   heroName: "Thor",
                   image: "thor_back",
                   detailImage: "thor_detail",
                   planet: "Asgard",
                   symbol: "thor_sy", createdBy: "Jack Kirby"),
             
-            Heros(name: "Natasha Romanoff",
+            Hero(name: "Natasha Romanoff",
                   heroName: "Black Widow",
                   image: "widow_back",
                   detailImage: "widow_detail",
@@ -70,7 +70,7 @@ class Heros: MarvelCharacters {
                   symbol: "widow_sy", createdBy: "Stan Lee"
             ),
             
-            Heros(name: "Bruce Banner",
+            Hero(name: "Bruce Banner",
                   heroName: "Hulk",
                   image: "hulk_back",
                   detailImage: "hulk_detail",
@@ -78,7 +78,7 @@ class Heros: MarvelCharacters {
                   symbol: "hulk_sy", createdBy: "Stan Lee"
             ),
             
-            Heros(name: "Clint Barton",
+            Hero(name: "Clint Barton",
                   heroName: "Hawkeye",
                   image: "hawkeye_back",
                   detailImage: "hawkeye_detail",
@@ -87,7 +87,7 @@ class Heros: MarvelCharacters {
             ),
             
             
-            Heros(name: "Wanda Maximoff",
+            Hero(name: "Wanda Maximoff",
                   heroName: "Scarlet Witch",
                   image: "witch_back",
                   detailImage: "witch_detail",
@@ -95,7 +95,7 @@ class Heros: MarvelCharacters {
                   symbol: "witch_sy", createdBy: "Jack Kirby"
             ),
             
-            Heros(name: "James Rhode",
+            Hero(name: "James Rhode",
                   heroName: "War Machine",
                   image: "war_back",
                   detailImage: "war_detail",
@@ -104,7 +104,7 @@ class Heros: MarvelCharacters {
             
             ),
             
-            Heros(name: "Scott Lang",
+            Hero(name: "Scott Lang",
                   heroName: "Ant-Man",
                   image: "ant_back",
                   detailImage: "ant_detail",
@@ -112,7 +112,7 @@ class Heros: MarvelCharacters {
                   symbol: "ant_sy", createdBy: "David Michelinie"
             ),
             
-            Heros(name: "Sam Wilson",
+            Hero(name: "Sam Wilson",
                   heroName: "Falcon",
                   image: "falcon_back",
                   detailImage: "falcon_detail",
@@ -120,7 +120,7 @@ class Heros: MarvelCharacters {
                   symbol: "falcon_sy", createdBy: "Gene Colan"
             ),
             
-            Heros(name: "Stephen Strange",
+            Hero(name: "Stephen Strange",
                   heroName: "Dr. Strange",
                   image: "doctor_back",
                   detailImage: "doctor_detail",
@@ -128,7 +128,7 @@ class Heros: MarvelCharacters {
                   symbol: "doctor_sy", createdBy: "Steve Ditko"
             ),
             
-            Heros(name: "Peter Parker",
+            Hero(name: "Peter Parker",
                   heroName: "Spider-Man",
                   image: "spider_back",
                   detailImage: "spider_detail",
@@ -136,7 +136,7 @@ class Heros: MarvelCharacters {
                   symbol: "spider_sy", createdBy: "Stan Lee"
             ),
             
-            Heros(name: "Peter Quill",
+            Hero(name: "Peter Quill",
                   heroName: "Star Lord",
                   image: "star_back",
                   detailImage: "star_detail",
@@ -144,7 +144,7 @@ class Heros: MarvelCharacters {
                   symbol: "guardians_sy", createdBy: "Steve Englehart"
             ),
             
-            Heros(name: "Vision",
+            Hero(name: "Vision",
                   heroName: "Vision",
                   image: "vision_back",
                   detailImage: "vision_detail",
@@ -152,7 +152,7 @@ class Heros: MarvelCharacters {
                   symbol: "vision_sy", createdBy: "Roy Thomas"
             ),
             
-            Heros(name: "Carol Denvers",
+            Hero(name: "Carol Denvers",
                   heroName: "Capitana Marvel",
                   image: "capitana_back",
                   detailImage: "capitana_detail",
@@ -160,7 +160,7 @@ class Heros: MarvelCharacters {
                   symbol: "capitana_sy", createdBy: "Roy Thomas"
             ),
             
-            Heros(name: "Rocket Raccoon",
+            Hero(name: "Rocket Raccoon",
                   heroName: "Rocky Raccoon",
                   image: "raccoon_back",
                   detailImage: "raccoon_detail",

@@ -17,6 +17,8 @@
                 <outlet property="characterName" destination="b4f-pF-PI6" id="xgT-mF-jyo"/>
                 <outlet property="characterPlanet" destination="mSI-ro-PWc" id="gkO-Tn-mtI"/>
                 <outlet property="createdBy" destination="qQX-PW-tdn" id="7eI-Nu-Blk"/>
+                <outlet property="heroBackgroundView" destination="q5H-Nl-eYF" id="2ae-r4-Nde"/>
+                <outlet property="heroNameView" destination="yi1-yT-Wbc" id="NdY-9q-dpk"/>
                 <outlet property="symbolImage" destination="fWn-41-IZ8" id="clQ-9o-ns1"/>
                 <outlet property="symbolView" destination="RSB-hM-UyE" id="ewc-8p-oiz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -35,7 +37,7 @@
                         </imageView>
                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yi1-yT-Wbc">
                             <rect key="frame" x="0.0" y="395" width="414" height="60"/>
-                            <color key="backgroundColor" name="villain"/>
+                            <color key="backgroundColor" name="enimy_color"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Black Panther" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMH-p7-co8">
                             <rect key="frame" x="8" y="408" width="398" height="40"/>
@@ -45,7 +47,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WwH-Fk-EjX">
-                            <rect key="frame" x="8" y="463" width="398" height="312"/>
+                            <rect key="frame" x="8" y="463" width="398" height="343"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RSB-hM-UyE">
                                     <rect key="frame" x="119" y="158.5" width="158" height="120.5"/>
@@ -140,8 +142,8 @@
                                 <constraint firstAttribute="trailing" secondItem="RSB-hM-UyE" secondAttribute="trailing" constant="121" id="ImF-wc-7Mv"/>
                                 <constraint firstItem="RSB-hM-UyE" firstAttribute="top" secondItem="5Fv-82-xxh" secondAttribute="bottom" constant="8" id="T9A-Lc-2OK"/>
                                 <constraint firstItem="5Fv-82-xxh" firstAttribute="top" secondItem="WwH-Fk-EjX" secondAttribute="top" constant="20" symbolic="YES" id="gYa-Jw-ZEU"/>
-                                <constraint firstAttribute="bottom" secondItem="RSB-hM-UyE" secondAttribute="bottom" constant="33" id="xLa-yh-Mjo"/>
-                                <constraint firstAttribute="bottom" secondItem="5Fv-82-xxh" secondAttribute="bottom" constant="161.5" id="yKW-SY-V3E"/>
+                                <constraint firstAttribute="bottom" secondItem="RSB-hM-UyE" secondAttribute="bottom" constant="64" id="xLa-yh-Mjo"/>
+                                <constraint firstAttribute="bottom" secondItem="5Fv-82-xxh" secondAttribute="bottom" constant="192.5" id="yKW-SY-V3E"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -174,12 +176,12 @@
     </objects>
     <resources>
         <image name="black_front" width="420" height="302.5"/>
-        <image name="thor_sy" width="750" height="750"/>
+        <image name="thor_sy" width="1500" height="1500"/>
+        <namedColor name="enimy_color">
+            <color red="0.3529999852180481" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="heros">
             <color red="0.086000002920627594" green="0.19200000166893005" blue="0.34900000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="villain">
-            <color red="0.3529999852180481" green="0.046999998390674591" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

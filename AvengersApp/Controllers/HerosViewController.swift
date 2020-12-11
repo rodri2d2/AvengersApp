@@ -11,7 +11,7 @@ class HerosViewController: UIViewController  {
     
     
     // MARK: - Properties
-    let listOfHeros = Heros.listOfHeros()
+    let listOfHeros = Hero.listOfHeros()
     
     
     // MARK: - Views
@@ -56,7 +56,7 @@ class HerosViewController: UIViewController  {
     
     private func setupTabBar(){
         self.tabBarController?.delegate = self
-        self.tabBarController?.tabBar.tintColor = UIColor(named: "heros")
+        self.tabBarController?.tabBar.tintColor = UIColor(named: "hero_color")
         
     }
     
@@ -85,7 +85,7 @@ class HerosViewController: UIViewController  {
     private func setupCollectionView(){
         self.view.addSubview(collectionView)
         collectionView.pin(to: self.view)
-        collectionView.backgroundColor = UIColor(named: "heros")
+        collectionView.backgroundColor = UIColor(named: "hero_color")
     }
     
 }

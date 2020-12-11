@@ -28,7 +28,7 @@ class HeroCell: UICollectionViewCell {
     }
     
     // MARK: - Class functionalities
-    func configure(cellWith hero: MarvelCharacters
+    func configure(cellWith hero: MarvelCharacter
     ){
         self.heroCardImage.image    = UIImage(named: hero.image ?? "nav_bar")
         self.heroCardName.text      = hero.heroName

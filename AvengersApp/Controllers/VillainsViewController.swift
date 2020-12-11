@@ -10,8 +10,7 @@ import UIKit
 class VillainsViewController: UIViewController {
 
     // MARK: - Properties
-    let listOfHeros = Heros.listOfHeros()
-
+    let listOfEnimies = Enimy.listOfEnimies()
     
     // MARK: - Views
     lazy var collectionView: UICollectionView = { [weak self] in
@@ -25,65 +24,51 @@ class VillainsViewController: UIViewController {
         return collectionView
         
     }()
-
-    let collectionViewBackground : UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named:"nav_bar")
-        iv.contentMode = .scaleAspectFit
-        return iv
-    }()
+    
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-  
-   
-
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupViews()
+        setupTabBar()
+        setupNavigationBar()
     }
+    
     
     // MARK: - Class functionalities
     private func setupViews(){
-        setupTabBar()
-        setupNavigationBar()
         setupCollectionView()
     }
     
     private func setupTabBar(){
         self.tabBarController?.delegate = self
-        self.tabBarController?.tabBar.tintColor = UIColor(named: "villain")
-       
+        self.tabBarController?.tabBar.tintColor = UIColor(named: "enimy_color")
+        
     }
     
     private func setupNavigationBar(){
         
         //
-        self.navigationItem.title = "Avengers"
+        self.navigationItem.title = "Enimies"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController!.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.largeTitleTextAttributes = [
-                                                                             .foregroundColor: UIColor.white,
-                                                                             .font: UIFont(name: "Futura-bold", size: 40)!
-                                                                            ]
+            .foregroundColor: UIColor.white,
+            .font: UIFont(name: "Futura-bold", size: 40)!
+        ]
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white,
                                                                         .font: UIFont(name: "Futura", size: 25)!
         ]
-
-//        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-//        imageView.contentMode = .scaleAspectFit
-//        let image = UIImage(named: "TabBar_Avengers")
-//        imageView.image = image
-//        navigationItem.titleView = imageView
     }
-
+    
     private func setupCollectionView(){
         self.view.addSubview(collectionView)
         collectionView.pin(to: self.view)
-        collectionView.backgroundColor = UIColor(named: "villain")
+        collectionView.backgroundColor = UIColor(named: "enimy_color")
     }
     
 }
@@ -92,19 +77,20 @@ class VillainsViewController: UIViewController {
 // MARK: - Extension for UICollectionView DataSource
 extension VillainsViewController: UICollectionViewDataSource{
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listOfHeros.count
+        return listOfEnimies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCell.IDENTIFIER, for: indexPath) as? HeroCell else { return UICollectionViewCell()}
-       
+        
+        let enimy = listOfEnimies[indexPath.row]
+        cell.configure(cellWith: enimy)
         return cell
     }
     
-    
 }
+
 
 // MARK: - Extension for UICollectionView DelegateFlowLayout
 extension VillainsViewController: UICollectionViewDelegateFlowLayout{
@@ -114,11 +100,14 @@ extension VillainsViewController: UICollectionViewDelegateFlowLayout{
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        navigationController?.pushViewController(DetailController(), animated: true)
+        
+        let enimy = listOfEnimies[indexPath.row]
+        navigationController?.pushViewController(DetailController(character: enimy), animated: true)
     }
-    
-    
+
 }
+
+
 
 // MARK: - Extension for UITabBarController Delegate
 extension VillainsViewController: UITabBarControllerDelegate{
@@ -126,4 +115,3 @@ extension VillainsViewController: UITabBarControllerDelegate{
         self.navigationController?.popToRootViewController(animated: true)
     }
 }
-
