@@ -68,6 +68,15 @@ The goal of this exercise is to define and to implement a base structure of an a
 <br />
 <br />
 
+# Sample
+<p align="center">
+  <img src="https://github.com/rodri2d2/rodri2d2/blob/master/color_touches_12_10_20.gif">
+</p>
+<p align="center">
+  <img src="https://github.com/rodri2d2/rodri2d2/blob/master/color_touches_12_10_20.gif">
+</p>
+
+
 >Este es un proyecto de puesta en practica del BootCamp Full Stack Mobile de KeepCoding.
 >No representa ningun beneficion comercial.
 
