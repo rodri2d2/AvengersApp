@@ -14,7 +14,6 @@
 		5B5B49AE256EC218005027D3 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B49AD256EC218005027D3 /* LaunchViewController.swift */; };
 		5B5B49B3256EC219005027D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49B2256EC219005027D3 /* Assets.xcassets */; };
 		5B5B49B6256EC219005027D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B5B49B4256EC219005027D3 /* LaunchScreen.storyboard */; };
-		5B7B1F7E25820E7D006C13E1 /* Ext+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B1F7D25820E7D006C13E1 /* Ext+UIViewController.swift */; };
 		5B7B1F842582A5E3006C13E1 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7B1F832582A5E3006C13E1 /* Enemy.swift */; };
 		5BA07CF1257F97C5009F11CA /* ViewControllersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CF0257F97C5009F11CA /* ViewControllersArray.swift */; };
 		5BA07CF7257F9BE0009F11CA /* Ext+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */; };
@@ -38,7 +37,6 @@
 		5B5B49B2256EC219005027D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B5B49B5256EC219005027D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B5B49B7256EC219005027D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B7B1F7D25820E7D006C13E1 /* Ext+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIViewController.swift"; sourceTree = "<group>"; };
 		5B7B1F832582A5E3006C13E1 /* Enemy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
 		5BA07CF0257F97C5009F11CA /* ViewControllersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllersArray.swift; sourceTree = "<group>"; };
 		5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+UIView.swift"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			children = (
 				5BA07CF0257F97C5009F11CA /* ViewControllersArray.swift */,
 				5BA07CF6257F9BE0009F11CA /* Ext+UIView.swift */,
-				5B7B1F7D25820E7D006C13E1 /* Ext+UIViewController.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -257,7 +254,6 @@
 				5BEBAEB5258125C100433476 /* DetailController.swift in Sources */,
 				5B5B49AE256EC218005027D3 /* LaunchViewController.swift in Sources */,
 				5B5B49AA256EC218005027D3 /* AppDelegate.swift in Sources */,
-				5B7B1F7E25820E7D006C13E1 /* Ext+UIViewController.swift in Sources */,
 				5BA07D0E257FECA6009F11CA /* HeroCell.swift in Sources */,
 				5BA07CFC257FCC2C009F11CA /* HerosViewController.swift in Sources */,
 				5BA07CF1257F97C5009F11CA /* ViewControllersArray.swift in Sources */,
