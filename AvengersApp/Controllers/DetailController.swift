@@ -57,37 +57,47 @@ class DetailController: UIViewController {
     }
     
     // MARK: - Class Functionalities
+    
+    
+    /// Will define view colors
     private func checkCharactersType(){
         switch  marvelCharacter{
             case is Hero:
-                configureViewColors(nameColor: "enimy_color", and: "hero_color")
-            case is Enimy:
-                configureViewColors(nameColor: "hero_color", and: "enimy_color")
+                configureViewColors(nameColor: "enimy_color", backgroundColor: "hero_color")
+            case is Enemy:
+                configureViewColors(nameColor: "hero_color", backgroundColor: "enimy_color")
             default:
-                configureViewColors(nameColor: "enimy_color", and: "hero_color")
+                configureViewColors(nameColor: "enimy_color", backgroundColor: "hero_color")
         }
     }
     
-    private func configureViewColors(nameColor: String, and backgroundColor: String){
+    private func configureViewColors(nameColor: String, backgroundColor: String){
         self.heroNameView.backgroundColor = UIColor(named: nameColor)
         self.heroBackgroundView.backgroundColor = UIColor(named: backgroundColor)
     }
     
     private func configure(with character: MarvelCharacter) {
         
-        self.character.text     = character.heroName
-        self.characterName.text = character.name
-        self.characterPlanet.text = character.planet
-        self.characterImage.image = UIImage(named: character.detailImage!)
+        self.character.text         = character.heroName
+        self.characterName.text     = character.name
+        self.characterPlanet.text   = character.planet
+        
         self.createdBy.text = character.createdBy
 
+        if(character.detailImage == nil){
+            self.characterImage.image   = UIImage(named: "nav_bar")
+        }else{
+            self.characterImage.image   = UIImage(named: character.detailImage!)
+        }
+        
+        
         if (character is Hero){
             if(character.symbol == nil || character.symbol == "") {
                 symbolImage.image = UIImage(named:"generic_sy")
             }else{
                 self.symbolImage.image = UIImage(named: character.symbol!)
             }
-        } else if(character is Enimy){
+        } else if(character is Enemy){
             if(character.symbol == nil || character.symbol == "") {
                 symbolImage.image = UIImage(named:"TabBar_Thanos")
             }else{

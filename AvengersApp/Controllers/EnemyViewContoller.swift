@@ -7,10 +7,10 @@
 
 import UIKit
 
-class VillainsViewController: UIViewController {
+class EnemyViewContoller: UIViewController {
 
     // MARK: - Properties
-    let listOfEnimies = Enimy.listOfEnimies()
+    var listOfEnemies = Enemy.listOfEnemies()
     
     // MARK: - Views
     lazy var collectionView: UICollectionView = { [weak self] in
@@ -45,8 +45,8 @@ class VillainsViewController: UIViewController {
     }
     
     private func setupTabBar(){
-        self.tabBarController?.delegate = self
-        self.tabBarController?.tabBar.tintColor = UIColor(named: "enimy_color")
+//        self.tabBarController?.delegate = self
+        self.tabBarController?.tabBar.tintColor = UIColor(named: "enemy_color")
         
     }
     
@@ -68,24 +68,24 @@ class VillainsViewController: UIViewController {
     private func setupCollectionView(){
         self.view.addSubview(collectionView)
         collectionView.pin(to: self.view)
-        collectionView.backgroundColor = UIColor(named: "enimy_color")
+        collectionView.backgroundColor = UIColor(named: "enemy_color")
     }
     
 }
 
 
 // MARK: - Extension for UICollectionView DataSource
-extension VillainsViewController: UICollectionViewDataSource{
+extension EnemyViewContoller: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return listOfEnimies.count
+        return listOfEnemies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeroCell.IDENTIFIER, for: indexPath) as? HeroCell else { return UICollectionViewCell()}
         
-        let enimy = listOfEnimies[indexPath.row]
-        cell.configure(cellWith: enimy)
+        let enemy = listOfEnemies[indexPath.row]
+        cell.configure(cellWith: enemy)
         return cell
     }
     
@@ -93,7 +93,7 @@ extension VillainsViewController: UICollectionViewDataSource{
 
 
 // MARK: - Extension for UICollectionView DelegateFlowLayout
-extension VillainsViewController: UICollectionViewDelegateFlowLayout{
+extension EnemyViewContoller: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 400, height: 200)
@@ -101,17 +101,10 @@ extension VillainsViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let enimy = listOfEnimies[indexPath.row]
-        navigationController?.pushViewController(DetailController(character: enimy), animated: true)
+        let enemy = listOfEnemies[indexPath.row]
+        navigationController?.pushViewController(DetailController(character: enemy), animated: true)
     }
 
 }
 
 
-
-// MARK: - Extension for UITabBarController Delegate
-extension VillainsViewController: UITabBarControllerDelegate{
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-}

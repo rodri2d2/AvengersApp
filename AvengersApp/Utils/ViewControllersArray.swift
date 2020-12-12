@@ -18,15 +18,15 @@ struct ViewControllersArray {
         return vc
     }
 
-//    private var beAHeroViewController: UINavigationController {
-//        let vc = UINavigationController(rootViewController: VillainsViewController())
-//        vc.tabBarItem.title = "Be a Hero"
-//        vc.tabBarItem.image = UIImage(systemName: "camera")
-//        return vc
-//    }
+    private var beAHeroViewController: UINavigationController {
+        let vc = UINavigationController(rootViewController: BeAHeroViewController())
+        vc.tabBarItem.title = "Be a Hero"
+        vc.tabBarItem.image = UIImage(systemName: "camera")
+        return vc
+    }
     
-    private var villainsViewController: UINavigationController {
-        let vc = UINavigationController(rootViewController: VillainsViewController())
+    private var enemyViewController: UINavigationController {
+        let vc = UINavigationController(rootViewController: EnemyViewContoller())
         vc.tabBarItem.title = "Enimies"
         vc.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         vc.tabBarItem.image = UIImage(named: "TabBar_Thanos")
@@ -38,7 +38,7 @@ struct ViewControllersArray {
     /// and than passed through this method
     /// - Returns: [UIViewController]
     func array() -> [UIViewController] {
-        return [herosViewController, villainsViewController]
+        return [herosViewController, beAHeroViewController, enemyViewController]
     }
     
 }

@@ -8,10 +8,11 @@
 import UIKit
 
 class HerosViewController: UIViewController  {
-    
+
     
     // MARK: - Properties
-    let listOfHeros = Hero.listOfHeros()
+    var listOfHeros = Hero.listOfHeros()
+    let beAHero = BeAHeroViewController()
     
     
     // MARK: - Views
@@ -38,12 +39,13 @@ class HerosViewController: UIViewController  {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupViews()
+        setupTabBar()
+        collectionView.reloadData()
     }
     
     
@@ -55,9 +57,7 @@ class HerosViewController: UIViewController  {
     }
     
     private func setupTabBar(){
-        self.tabBarController?.delegate = self
         self.tabBarController?.tabBar.tintColor = UIColor(named: "hero_color")
-        
     }
     
     private func setupNavigationBar(){
@@ -122,13 +122,4 @@ extension HerosViewController: UICollectionViewDelegateFlowLayout{
         navigationController?.pushViewController(DetailController(character: hero), animated: true)
     }
 
-}
-
-
-
-// MARK: - Extension for UITabBarController Delegate
-extension HerosViewController: UITabBarControllerDelegate{
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
 }
