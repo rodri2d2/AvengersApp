@@ -1,6 +1,15 @@
 # KeepCoding - Funcamentos iOS Practica 1 / Basic iOS - Exercise 1
 
 
+
+# Samples
+
+<p float="left">
+  <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part1.gif" width="200" />
+  <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part2.gif" width="200" /> 
+</p>
+<br />
+
 ## Objetivos principales
 
 El objetivo de la práctica es definir e implementar una estructura base de aplicación aplicando un diseño coherente creando una nueva aplicación llamada *AvengersApp*
@@ -60,19 +69,6 @@ The goal of this exercise is to define and to implement a base structure of an a
 
 <br />
 <br />
-
-# Samples
-
-<p float="left">
-  <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part1.gif" width="200" />
-  <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part2.gif" width="200" /> 
-</p>
-<br />
-<br />
-
-
-
-
 
 >Este es un proyecto de puesta en practica del BootCamp Full Stack Mobile de KeepCoding.
 >No representa ningun beneficion comercial.
