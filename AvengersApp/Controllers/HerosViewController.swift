@@ -38,12 +38,12 @@ class HerosViewController: UIViewController  {
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupViews()
+        setupTabBar()
     }
     
     
@@ -55,9 +55,7 @@ class HerosViewController: UIViewController  {
     }
     
     private func setupTabBar(){
-        self.tabBarController?.delegate = self
         self.tabBarController?.tabBar.tintColor = UIColor(named: "hero_color")
-        
     }
     
     private func setupNavigationBar(){
@@ -125,10 +123,3 @@ extension HerosViewController: UICollectionViewDelegateFlowLayout{
 }
 
 
-
-// MARK: - Extension for UITabBarController Delegate
-extension HerosViewController: UITabBarControllerDelegate{
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-}

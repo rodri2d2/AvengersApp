@@ -45,7 +45,7 @@ class EnemyViewContoller: UIViewController {
     }
     
     private func setupTabBar(){
-        self.tabBarController?.delegate = self
+//        self.tabBarController?.delegate = self
         self.tabBarController?.tabBar.tintColor = UIColor(named: "enemy_color")
         
     }
@@ -108,10 +108,3 @@ extension EnemyViewContoller: UICollectionViewDelegateFlowLayout{
 }
 
 
-
-// MARK: - Extension for UITabBarController Delegate
-extension EnemyViewContoller: UITabBarControllerDelegate{
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        self.navigationController?.popToRootViewController(animated: true)
-    }
-}

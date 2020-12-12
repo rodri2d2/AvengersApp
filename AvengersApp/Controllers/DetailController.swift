@@ -57,18 +57,21 @@ class DetailController: UIViewController {
     }
     
     // MARK: - Class Functionalities
+    
+    
+    /// Will define view colors
     private func checkCharactersType(){
         switch  marvelCharacter{
             case is Hero:
-                configureViewColors(nameColor: "enimy_color", and: "hero_color")
+                configureViewColors(nameColor: "enimy_color", backgroundColor: "hero_color")
             case is Enemy:
-                configureViewColors(nameColor: "hero_color", and: "enimy_color")
+                configureViewColors(nameColor: "hero_color", backgroundColor: "enimy_color")
             default:
-                configureViewColors(nameColor: "enimy_color", and: "hero_color")
+                configureViewColors(nameColor: "enimy_color", backgroundColor: "hero_color")
         }
     }
     
-    private func configureViewColors(nameColor: String, and backgroundColor: String){
+    private func configureViewColors(nameColor: String, backgroundColor: String){
         self.heroNameView.backgroundColor = UIColor(named: nameColor)
         self.heroBackgroundView.backgroundColor = UIColor(named: backgroundColor)
     }

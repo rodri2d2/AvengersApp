@@ -9,15 +9,15 @@ import UIKit
 
 class LaunchViewController: UIViewController {
 
-    
-    
     // MARK: - Properties
+    
+    /// An array of ViewController to setup "automatically" a TabBar view with its items
    let viewControllers = ViewControllersArray()
 
     
     
     // MARK: - TabBar Configuration
-    lazy var tabViewController: UITabBarController = { [weak self] in
+    private lazy var tabViewController: UITabBarController = { [weak self] in
         let tabView = UITabBarController()
         tabView.setViewControllers(viewControllers.array(), animated: true)
         tabView.modalPresentationStyle  = .fullScreen
@@ -28,7 +28,7 @@ class LaunchViewController: UIViewController {
  
     // MARK: - Outlets
     private lazy var imageLogo: UIImageView = { [weak self] in
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        let imageView         = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -49,6 +49,7 @@ class LaunchViewController: UIViewController {
         }
     }
 
+    
     // MARK: - Class functionalities
     private func setupNavigationController(){
         navigationController?.isNavigationBarHidden = true
@@ -61,16 +62,18 @@ class LaunchViewController: UIViewController {
     private func setupImageLogo(){
         self.view.addSubview(imageLogo)
         imageLogo.center = view.center
-        imageLogo.image = UIImage(named: "launch")
+        imageLogo.image  = UIImage(named: "launch")
     }
     
 
+    
+    /// Will trigger an animation. Base on screen size the imageView will be pushed from its initial position to a negative X and Y while it increases its size
     private func animateLogo(){
         UIView.animate(withDuration: 2) {
-            let size = self.view.frame.size.width * 3
-            let scaleX = size - (self.view.frame.size.width)
-            let scaleY = (self.view.frame.size.height) - size
-            
+            let size    = self.view.frame.size.width * 3
+            let scaleX  = size - (self.view.frame.size.width)
+            let scaleY  = (self.view.frame.size.height) - size
+    
             self.imageLogo.frame = CGRect(x: -(scaleX/2), y: scaleY/2, width: size, height: size)
             self.imageLogo.alpha = 0
         }
