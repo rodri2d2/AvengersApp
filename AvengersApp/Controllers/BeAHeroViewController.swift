@@ -9,11 +9,20 @@ import UIKit
 
 class BeAHeroViewController: UIViewController {
     
+    
+    // MARK: - Properties
+    var tryToAccept: Int = 0
+    
+    /// An array of ViewController to setup "automatically" a TabBar view with its items
+   let viewControllers = ViewControllersArray()
+    
     // MARK: - IBOutlets
     
     //Normal Views
     @IBOutlet private weak var backgroundView:  UIView!
-    @IBOutlet private weak var acceptButton:    UIView!
+
+    //Button Views
+    @IBOutlet weak var acceptButton: UIButton!
     
     //Segment Control View
     @IBOutlet private weak var selectionItem:   UISegmentedControl!
@@ -37,22 +46,24 @@ class BeAHeroViewController: UIViewController {
         //
         setupTapGesture()
         setupTextViews()
-        subscribeNotificationsForKeyboardsubscribeNotificationsForKeyboard()
-        
+        subscribeNotificationsForKeyboard()
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        clearView()
         setupNavigationBar()
     }
     
     
+    
     deinit {
         //Remove the notifications = stop listening for this events
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification,         object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification,  object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification,     object: nil)
     }
     
     
@@ -78,6 +89,8 @@ class BeAHeroViewController: UIViewController {
         
         //Before trigger the keyboard, check which text field is being used
         if !heroName.isEditing{
+            acceptButton.isOpaque = false
+            acceptButton.isUserInteractionEnabled = true
             showHideKeyboard(when: notification.name.rawValue, with: keyboardHeight)
         }
     }
@@ -90,8 +103,15 @@ class BeAHeroViewController: UIViewController {
     /// - Parameter sender: UIButton
     @IBAction func didBecomeAhero(_ sender: UIButton) {
         
-        print("click")
+        if (heroName.text == "" && tryToAccept >= 3) {
+            let alert = UIAlertController(title: "Oops!Few steps missing...", message: "Enter HERO name!", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }else if(!heroName.text!.isEmpty){
+            createAHero()
+        }
         
+        tryToAccept += 1
     }
     
     
@@ -102,8 +122,28 @@ class BeAHeroViewController: UIViewController {
         sender.selectedSegmentIndex == 0 ? setupViewColors(for: "hero") : setupViewColors(for: "enemy")
     }
     
+    @IBAction func didTapImage(_ sender: Any) {
+       
+        
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = UIImagePickerController.isSourceTypeAvailable(.camera) ? .camera : .photoLibrary
+        imagePicker.allowsEditing = true
+        present(imagePicker, animated: true)
+        
+    }
     
     // MARK: - Class functionalities
+    private func clearView(){
+        self.heroName.text      = nil
+        self.heroPlanet.text    = nil
+        self.heroRealName.text  = nil
+        self.heroActionImage.image = UIImage(systemName: "camera")
+        self.heroDetailImage.image = UIImage(systemName: "camera")
+        tryToAccept = 0 
+    }
+    
+    
     private func showHideKeyboard(when notificate: String, with height: CGFloat){
         
         switch notificate {
@@ -172,16 +212,44 @@ class BeAHeroViewController: UIViewController {
         
     }
     
+    
+    private func createAHero(){
+    
+
+        
+        let alias       = heroName.text!
+        let realName    = heroRealName.text ?? " - "
+        let planet      = heroPlanet.text   ?? " - "
+        
+        if(selectionItem.selectedSegmentIndex == 0){
+            let newHero = Hero(name: realName, heroName: alias, image: nil, detailImage: nil, planet: planet, symbol: nil, createdBy: "\(realName) Coorp.")
+            let navController = self.tabBarController!.viewControllers![0] as! UINavigationController
+            let heroViewContoller = navController.topViewController as! HerosViewController
+            heroViewContoller.listOfHeros.append(newHero)
+            self.tabBarController?.selectedIndex = 0
+            
+            
+        }else if (selectionItem.selectedSegmentIndex == 1) {
+            let newEnemy = Enemy(name: realName, heroName: alias, image: nil, detailImage: nil, planet: planet, symbol: nil, createdBy: "\(realName) Coorp.")
+            let navController = self.tabBarController!.viewControllers![2] as! UINavigationController
+            let enemyViewController = navController.topViewController as! EnemyViewContoller
+            enemyViewController.listOfEnemies.append(newEnemy)
+            self.tabBarController?.selectedIndex = 2           
+        }
+    
+    }
 }
 
 
 // MARK: - Extension for UITextFieldDelegate
 extension BeAHeroViewController: UITextFieldDelegate{
+
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
+    
 }
 
 
@@ -194,6 +262,11 @@ extension BeAHeroViewController: UIImagePickerControllerDelegate, UINavigationCo
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        picker.dismiss(animated: true, completion: nil)
+        guard let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return  }
+        heroActionImage.image = image
+        
     }
 }
 

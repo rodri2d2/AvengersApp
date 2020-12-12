@@ -10,7 +10,7 @@ import UIKit
 class EnemyViewContoller: UIViewController {
 
     // MARK: - Properties
-    let listOfEnemies = Enemy.listOfEnemies()
+    var listOfEnemies = Enemy.listOfEnemies()
     
     // MARK: - Views
     lazy var collectionView: UICollectionView = { [weak self] in

@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BeAHeroViewController" customModule="AvengersApp" customModuleProvider="target">
             <connections>
-                <outlet property="acceptButton" destination="O1c-RV-pkL" id="bSf-Vf-fr4"/>
+                <outlet property="acceptButton" destination="O1c-RV-pkL" id="R0J-MT-xNh"/>
                 <outlet property="backgroundView" destination="c7C-BG-iNb" id="dRw-5n-Ehv"/>
                 <outlet property="heroActionImage" destination="EcO-6r-3wI" id="z9E-K7-ZZ9"/>
                 <outlet property="heroDetailImage" destination="8Ha-di-tdk" id="Kpu-Wb-JZk"/>
@@ -41,16 +41,20 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNI-5C-DAu">
                             <rect key="frame" x="20" y="111" width="374" height="210"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-6r-3wI">
-                                    <rect key="frame" x="0.0" y="0.5" width="374" height="208.5"/>
+                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="EcO-6r-3wI">
+                                    <rect key="frame" x="0.0" y="0.5" width="374" height="151.5"/>
                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                    <gestureRecognizers/>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="o3h-Y9-vtA" appends="YES" id="d4v-RJ-TLF"/>
+                                    </connections>
                                 </imageView>
-                                <view alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNX-eE-Khs">
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNX-eE-Khs">
                                     <rect key="frame" x="0.0" y="154" width="374" height="56"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="labelColor"/>
                                 </view>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your hero name" textAlignment="center" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tnc-qi-FJ8">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hero name" textAlignment="center" minimumFontSize="18" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="tnc-qi-FJ8">
                                     <rect key="frame" x="0.0" y="161" width="374" height="34"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
@@ -63,7 +67,7 @@
                                 <constraint firstItem="EcO-6r-3wI" firstAttribute="top" secondItem="aNI-5C-DAu" secondAttribute="top" id="LWN-2x-8nO"/>
                                 <constraint firstItem="EcO-6r-3wI" firstAttribute="leading" secondItem="aNI-5C-DAu" secondAttribute="leading" id="XNL-QY-v8O"/>
                                 <constraint firstItem="tnc-qi-FJ8" firstAttribute="top" secondItem="aNI-5C-DAu" secondAttribute="top" constant="161" id="Zbu-Vf-43e"/>
-                                <constraint firstAttribute="bottom" secondItem="EcO-6r-3wI" secondAttribute="bottom" id="bdF-GE-1tV"/>
+                                <constraint firstAttribute="bottom" secondItem="EcO-6r-3wI" secondAttribute="bottom" constant="57" id="bdF-GE-1tV"/>
                                 <constraint firstAttribute="bottom" secondItem="tnc-qi-FJ8" secondAttribute="bottom" constant="15" id="htX-Lb-rIh"/>
                                 <constraint firstAttribute="trailing" secondItem="EcO-6r-3wI" secondAttribute="trailing" id="kGz-UI-HtB"/>
                                 <constraint firstItem="tnc-qi-FJ8" firstAttribute="leading" secondItem="aNI-5C-DAu" secondAttribute="leading" id="voi-cX-O8v"/>
@@ -75,21 +79,25 @@
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8Ha-di-tdk">
                                     <rect key="frame" x="108" y="8.5" width="174" height="172.5"/>
                                     <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="8Ha-di-tdk" secondAttribute="height" multiplier="1:1" id="Iz1-iL-uln"/>
                                     </constraints>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="byZ-6I-vgS" appends="YES" id="XVT-HT-hrk"/>
+                                    </connections>
                                 </imageView>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your Real Name" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="1It-Ny-9uO">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Real Name" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="1It-Ny-9uO">
                                     <rect key="frame" x="20" y="214" width="334" height="34"/>
                                     <color key="textColor" name="enimy_color"/>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 </textField>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your planet name" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pum-Ri-3TP">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Planet" textAlignment="center" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="Pum-Ri-3TP">
                                     <rect key="frame" x="20" y="267" width="334" height="34"/>
                                     <color key="textColor" name="enimy_color"/>
                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                 </textField>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bsD-fL-CQX">
                                     <rect key="frame" x="59" y="308" width="256" height="32"/>
@@ -161,27 +169,19 @@
                 <constraint firstItem="c7C-BG-iNb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wze-SD-NBm"/>
                 <constraint firstItem="c7C-BG-iNb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zeS-Bk-YLN"/>
             </constraints>
-            <point key="canvasLocation" x="-1452" y="-274"/>
+            <point key="canvasLocation" x="-1452.1739130434785" y="-274.55357142857139"/>
         </view>
         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="witch_back" id="Ocd-jt-SDU">
             <rect key="frame" x="0.0" y="0.0" width="557" height="265"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <point key="canvasLocation" x="1021" y="-175"/>
         </imageView>
-        <view contentMode="scaleToFill" id="oRS-WE-3xX">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera.viewfinder" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="YK9-Ya-iJd">
-                    <rect key="frame" x="0.0" y="367" width="414" height="170"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" systemColor="systemGray3Color"/>
-                </imageView>
-            </subviews>
-            <viewLayoutGuide key="safeArea" id="yLB-v6-A5B"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="-2152.1739130434785" y="-335.49107142857139"/>
-        </view>
+        <tapGestureRecognizer id="o3h-Y9-vtA">
+            <connections>
+                <action selector="didTapImage:" destination="-1" id="h36-XW-9OA"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="byZ-6I-vgS"/>
     </objects>
     <resources>
         <image name="camera.viewfinder" catalog="system" width="128" height="115"/>
@@ -201,14 +201,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray3Color">
-            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

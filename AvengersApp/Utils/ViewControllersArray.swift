@@ -25,7 +25,7 @@ struct ViewControllersArray {
         return vc
     }
     
-    private var villainsViewController: UINavigationController {
+    private var enemyViewController: UINavigationController {
         let vc = UINavigationController(rootViewController: EnemyViewContoller())
         vc.tabBarItem.title = "Enimies"
         vc.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
@@ -38,7 +38,7 @@ struct ViewControllersArray {
     /// and than passed through this method
     /// - Returns: [UIViewController]
     func array() -> [UIViewController] {
-        return [herosViewController, beAHeroViewController, villainsViewController]
+        return [herosViewController, beAHeroViewController, enemyViewController]
     }
     
 }

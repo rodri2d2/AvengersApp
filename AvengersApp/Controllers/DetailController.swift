@@ -78,12 +78,19 @@ class DetailController: UIViewController {
     
     private func configure(with character: MarvelCharacter) {
         
-        self.character.text     = character.heroName
-        self.characterName.text = character.name
-        self.characterPlanet.text = character.planet
-        self.characterImage.image = UIImage(named: character.detailImage!)
+        self.character.text         = character.heroName
+        self.characterName.text     = character.name
+        self.characterPlanet.text   = character.planet
+        
         self.createdBy.text = character.createdBy
 
+        if(character.detailImage == nil){
+            self.characterImage.image   = UIImage(named: "nav_bar")
+        }else{
+            self.characterImage.image   = UIImage(named: character.detailImage!)
+        }
+        
+        
         if (character is Hero){
             if(character.symbol == nil || character.symbol == "") {
                 symbolImage.image = UIImage(named:"generic_sy")

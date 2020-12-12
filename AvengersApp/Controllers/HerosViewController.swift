@@ -8,10 +8,11 @@
 import UIKit
 
 class HerosViewController: UIViewController  {
-    
+
     
     // MARK: - Properties
-    let listOfHeros = Hero.listOfHeros()
+    var listOfHeros = Hero.listOfHeros()
+    let beAHero = BeAHeroViewController()
     
     
     // MARK: - Views
@@ -44,6 +45,7 @@ class HerosViewController: UIViewController  {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupTabBar()
+        collectionView.reloadData()
     }
     
     
@@ -121,5 +123,3 @@ extension HerosViewController: UICollectionViewDelegateFlowLayout{
     }
 
 }
-
-
