@@ -6,7 +6,7 @@
 //
 
 import Foundation
-class Enimy: MarvelCharacter {
+class Enemy: MarvelCharacter {
     
     init() {
         super.init(name: "Marvel Hero", heroName: "Marvel Hero", image: nil, detailImage: nil, planet: nil, symbol: nil, createdBy: nil)
@@ -17,9 +17,9 @@ class Enimy: MarvelCharacter {
     }
     
     
-    static func listOfEnimies() -> [Enimy]{
+    static func listOfEnemies() -> [Enemy]{
         return [
-            Enimy(
+            Enemy(
                   name: "N'Jadaka",
                   heroName: "Killmonger",
                   image: "erik_back",
@@ -30,7 +30,7 @@ class Enimy: MarvelCharacter {
             ),
             
             
-            Enimy(name: "Obadiah Stane",
+            Enemy(name: "Obadiah Stane",
                   heroName: "Iron Monger",
                   image: "obadiah_back",
                   detailImage: "obadiah_detail",
@@ -39,7 +39,7 @@ class Enimy: MarvelCharacter {
             ),
             
             
-            Enimy(name: "Johann Schmidt",
+            Enemy(name: "Johann Schmidt",
                   heroName: "Red Skull",
                   image: "red_back",
                   detailImage: "red_detail",
@@ -48,7 +48,7 @@ class Enimy: MarvelCharacter {
             ),
             
             
-            Enimy(name: "Thanos",
+            Enemy(name: "Thanos",
                   heroName: "Thanos The Titan",
                   image: "thanos_back",
                   detailImage: "thanos_detail",
@@ -56,14 +56,14 @@ class Enimy: MarvelCharacter {
                   symbol: "thanos_sy", createdBy: "Jim Starlin"
             ),
             
-            Enimy(name: "Ultron",
+            Enemy(name: "Ultron",
                   heroName: "Ultron",
                   image: "ultron_back",
                   detailImage: "ultron_detail",
                   planet: "Tierra",
                   symbol: nil, createdBy: "Roy Thomas"),
             
-            Enimy(name: "Loki",
+            Enemy(name: "Loki",
                   heroName: "Loki",
                   image: "loki_back",
                   detailImage: "loki_detail",
@@ -71,7 +71,7 @@ class Enimy: MarvelCharacter {
                   symbol: "loki_sy", createdBy: "Jack Kirby"
             ),
             
-            Enimy(name: "Emil Blönsky",
+            Enemy(name: "Emil Blönsky",
                   heroName: "Abomination",
                   image: "abomination_back",
                   detailImage: "abomination_detail",
@@ -79,7 +79,7 @@ class Enimy: MarvelCharacter {
                   symbol: nil, createdBy: "Stan Lee"
             ),
             
-            Enimy(name: "Joe Crocker",
+            Enemy(name: "Joe Crocker",
                   heroName: "Kaecilius",
                   image: "kaecilius_back",
                   detailImage: "kaecilius_detail",

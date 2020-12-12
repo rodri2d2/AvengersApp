@@ -26,7 +26,7 @@ struct ViewControllersArray {
     }
     
     private var villainsViewController: UINavigationController {
-        let vc = UINavigationController(rootViewController: VillainsViewController())
+        let vc = UINavigationController(rootViewController: EnemyViewContoller())
         vc.tabBarItem.title = "Enimies"
         vc.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
         vc.tabBarItem.image = UIImage(named: "TabBar_Thanos")

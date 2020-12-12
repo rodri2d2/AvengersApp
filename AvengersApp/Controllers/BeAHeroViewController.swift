@@ -14,7 +14,7 @@ class BeAHeroViewController: UIViewController {
     @IBOutlet private weak var backgroundView: UIView!
     @IBOutlet private weak var acceptButton: UIView!
     @IBOutlet private weak var selectionItem: UISegmentedControl!
-
+    
     
     @IBOutlet private weak var heroActionImage: UIImageView!
     @IBOutlet private weak var heroDetailImage: UIImageView!
@@ -22,6 +22,7 @@ class BeAHeroViewController: UIViewController {
     @IBOutlet private weak var heroName: UITextField!
     @IBOutlet private weak var heroRealName: UITextField!
     @IBOutlet private weak var heroPlanet: UITextField!
+    
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -50,8 +51,6 @@ class BeAHeroViewController: UIViewController {
     
     // MARK: - Notification Subscribers
     private func subscribeNotifications(){
-        
-        
         //Suscribe for keyboard will show
         NotificationCenter.default.addObserver(self, selector: #selector(onChangeKeyboard(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         
@@ -60,9 +59,7 @@ class BeAHeroViewController: UIViewController {
         
         //Suscribe for keyboard will change frame (its sizes)
         NotificationCenter.default.addObserver(self, selector: #selector(onChangeKeyboard(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        
-        
-        
+ 
     }
     
     
@@ -90,10 +87,7 @@ class BeAHeroViewController: UIViewController {
     
     
     @IBAction func didChangeCharacter(_ sender: UISegmentedControl) {
-        
-        sender.selectedSegmentIndex == 0 ? setupViewColors(for: "hero") : setupViewColors(for: "enimy")
-        
-        
+        sender.selectedSegmentIndex == 0 ? setupViewColors(for: "hero") : setupViewColors(for: "enemy")
     }
     
     
@@ -128,24 +122,21 @@ class BeAHeroViewController: UIViewController {
     
     private func setupTextViews(){
         
+        self.heroName.delegate      = self
         self.heroName.returnKeyType     = .done
-        self.heroName.attributedPlaceholder = NSAttributedString(string: "Enter you Hero name",
-                                                                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+        self.heroName.attributedPlaceholder = NSAttributedString(string: "Enter you Hero name",attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+  
         
-        
+        self.heroRealName.delegate  = self
         self.heroRealName.returnKeyType = .done
-        self.heroRealName.attributedPlaceholder = NSAttributedString(string: "Enter your Real name",
-                                                                     attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "enimy_color")!])
+        self.heroRealName.attributedPlaceholder = NSAttributedString(string: "Enter your Real name",                                attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "enemy_color")!])
         
         
+        
+        self.heroPlanet.delegate    = self
         self.heroPlanet.returnKeyType   = .done
         self.heroPlanet.attributedPlaceholder = NSAttributedString(string: "Enter your Planet name",
-                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "enimy_color")!])
-        
-        
-        self.heroName.delegate      = self
-        self.heroRealName.delegate  = self
-        self.heroPlanet.delegate    = self
+                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor(named: "enemy_color")!])
         
     }
     
@@ -154,9 +145,9 @@ class BeAHeroViewController: UIViewController {
         
         if character == "hero" {
             self.backgroundView.backgroundColor = UIColor(named: "hero_color")
-            self.acceptButton.backgroundColor = UIColor(named: "enimy_color")
-        } else if character == "enimy"{
-            self.backgroundView.backgroundColor = UIColor(named: "enimy_color")
+            self.acceptButton.backgroundColor = UIColor(named: "enemy_color")
+        } else if character == "enemy"{
+            self.backgroundView.backgroundColor = UIColor(named: "enemy_color")
             self.acceptButton.backgroundColor = UIColor(named: "hero_color")
         }
         

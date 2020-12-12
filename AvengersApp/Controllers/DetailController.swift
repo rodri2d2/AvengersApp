@@ -61,7 +61,7 @@ class DetailController: UIViewController {
         switch  marvelCharacter{
             case is Hero:
                 configureViewColors(nameColor: "enimy_color", and: "hero_color")
-            case is Enimy:
+            case is Enemy:
                 configureViewColors(nameColor: "hero_color", and: "enimy_color")
             default:
                 configureViewColors(nameColor: "enimy_color", and: "hero_color")
@@ -87,7 +87,7 @@ class DetailController: UIViewController {
             }else{
                 self.symbolImage.image = UIImage(named: character.symbol!)
             }
-        } else if(character is Enimy){
+        } else if(character is Enemy){
             if(character.symbol == nil || character.symbol == "") {
                 symbolImage.image = UIImage(named:"TabBar_Thanos")
             }else{
