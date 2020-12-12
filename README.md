@@ -61,6 +61,8 @@ The goal of this exercise is to define and to implement a base structure of an a
 <br />
 <br />
 
+# Samples
+
 <p float="left">
   <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part1.gif" width="200" />
   <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part2.gif" width="200" /> 
@@ -68,13 +70,8 @@ The goal of this exercise is to define and to implement a base structure of an a
 <br />
 <br />
 
-# Sample
-<p align="center">
-  <img src="https://github.com/rodri2d2/rodri2d2/blob/master/color_touches_12_10_20.gif">
-</p>
-<p align="center">
-  <img src="https://github.com/rodri2d2/rodri2d2/blob/master/color_touches_12_10_20.gif">
-</p>
+
+
 
 
 >Este es un proyecto de puesta en practica del BootCamp Full Stack Mobile de KeepCoding.
