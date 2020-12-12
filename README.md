@@ -60,6 +60,11 @@ The goal of this exercise is to define and to implement a base structure of an a
 
 <br />
 <br />
+
+<p float="left">
+  <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part1.gif" width="200" />
+  <img src="https://github.com/rodri2d2/AvengersApp/blob/release/v1.0/gif/part2.gif" width="200" /> 
+</p>
 <br />
 <br />
 
