@@ -34,7 +34,7 @@ El objetivo de la práctica es definir e implementar una estructura base de apli
 - Ficheros NIB
 - Launch screen
 
-### ¿Que implementar en la siguente version actual?
+### ¿Que implementar en la siguente version?
 - Guardar las photos en memoria y utilizarlas para el data source del CollectionView
 - Implentar otros patrones de codigo
 
@@ -63,7 +63,7 @@ The goal of this exercise is to define and to implement a base structure of an a
 - NIB Files
 - Launch screen
 
-### What to do for the next version
+### What to do for the next version?
 - Save taken photos on memory to use later on CollectionView data souce
 - Implement new code patterns to optimizate
 
